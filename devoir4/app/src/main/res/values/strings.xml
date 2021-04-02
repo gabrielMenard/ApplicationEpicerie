@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">devoir4</string>
+    <string name="ecoshop">Ecoshop</string>
+    <string name="oublie">Veuillez saisir votre adresse courriel et nous vous enverrons un lien pour réinitialiser votre mot de passe.</string>
+    <string name="adresse_courriel">Adresse courriel</string>
+    <string name="envoyer_le_courriel">Envoyer le courriel</string>
+    <string name="nom">Nom</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="confirmation">Confirmation du mot de passe</string>
+    <string name="lire">j\'ai lu et accepté les conditions</string>
+    <string name="sinscrire">S\'inscrire</string>
+    <string name="nom_produit">Nom du produit</string>
+    <string name="info_produit">Informattion sur le produit</string>
+    <string name="voir_alternatives">Voir alternatives</string>
+    <string name="voir_plus">Voir plus</string>
 </resources>
