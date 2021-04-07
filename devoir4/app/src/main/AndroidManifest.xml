@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Devoir4">
-        <activity android:name=".ResultatChoisi"></activity>
+        <activity android:name=".Panier"></activity>
+        <activity android:name=".Historique" />
+        <activity android:name=".InfoSup" />
+        <activity android:name=".Modifier" />
+        <activity android:name=".ResultatChoisi" />
         <activity android:name=".CreerCompte" />
         <activity android:name=".MainActivity">
             <intent-filter>

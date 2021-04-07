@@ -153,6 +153,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/editText5" />
 
             <Button
+                android:id="@+id/inscription"
                 android:layout_width="229dp"
                 android:layout_height="49dp"
                 android:text="@string/sinscrire"

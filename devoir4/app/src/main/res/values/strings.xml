@@ -13,4 +13,46 @@
     <string name="info_produit">Informattion sur le produit</string>
     <string name="voir_alternatives">Voir alternatives</string>
     <string name="voir_plus">Voir plus</string>
+    <string name="photo">Photo</string>
+    <string name="langue_de_preference">Langue de préférence</string>
+    <string name="changer_le_mot_de_passe">Changer le mot de passe</string>
+    <string name="nouveau_mot_de_passe">Nouveau mot de passe</string>
+    <string name="confirmation_modification_mdp">Confirmation</string>
+    <string name="sauvegarder">Sauvegarder</string>
+    <string name="endroit_d_origine">Endroit d\'origine</string>
+    <string-array name="langues">
+        <item>Français</item>
+        <item>English</item>
+    </string-array>
+    <string name="detail_supp">Détail supplémentaires sur l\'empreinte environnementale</string>
+    <string name="description_manu">Description de la manufacture</string>
+    <string name="historique">Historique</string>
+    <string name="date">Date</string>
+    <string name="emprunte">Emprunte</string>
+    <string name="jj_mm_aaaa">jj/mm/aaaa</string>
+    <string name="panier">Panier</string>
+    <string-array name="dates">
+        <item>05/06/2021</item>
+        <item>05/06/2021</item>
+        <item>05/06/2021</item>
+        <item>05/06/2021</item>
+        <item>05/06/2021</item>
+        <item>05/06/2021</item>
+        <item>05/06/2021</item>
+        <item>05/06/2021</item>
+        <item>05/06/2021</item>
+        <item>05/06/2021</item>
+    </string-array>
+    <string-array name="noms_produit">
+        <item>Produit 1</item>
+        <item>Produit 2</item>
+        <item>Produit 3</item>
+        <item>Produit 4</item>
+        <item>Produit 5</item>
+        <item>Produit 6</item>
+        <item>Produit 7</item>
+        <item>Produit 8</item>
+        <item>Produit 9</item>
+        <item>Produit 10</item>
+    </string-array>
 </resources>
