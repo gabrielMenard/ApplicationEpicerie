@@ -30,14 +30,14 @@ public class Accueil extends AppCompatActivity {
         b_panier = findViewById(R.id.b_panier);
         t_input_mots_cles = findViewById(R.id.t_input_mots_cles);
 
-        b_rechercher.setOnClickListener(b_rechercherListener);
+       // b_rechercher.setOnClickListener(b_rechercherListener);
     }
 
-    View.OnClickListener b_rechercherListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            motsCles = t_input_mots_cles.getText().toString();
-            startActivity(new Intent(Accueil.this, Results.class));
-        }
-    };
+//    View.OnClickListener b_rechercherListener = new View.OnClickListener() {
+//        @Override
+//        public void onClick(View v) {
+//            motsCles = t_input_mots_cles.getText().toString();
+//            //startActivity(new Intent(Accueil.this, Results.class));
+//        }
+//    };
 }
