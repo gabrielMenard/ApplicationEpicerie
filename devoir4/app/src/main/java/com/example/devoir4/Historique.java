@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,11 +20,16 @@ public class Historique extends AppCompatActivity {
     String[] dates;
     int[] empruntes = new int[] {R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp};
 
+    ImageView profile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historique);
         dates = getResources().getStringArray(R.array.dates);
+
+        profile = findViewById(R.id.imageView2);
+        profile.setOnClickListener(profileListener);
 
         recyclerView = findViewById(R.id.rv_historique);
         MyAdapter myAdapter = new MyAdapter(dates, empruntes);
@@ -31,6 +37,13 @@ public class Historique extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(myAdapter);
     }
+
+    View.OnClickListener profileListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(Historique.this, Profile.class));
+        }
+    };
 
     class MyAdapter extends RecyclerView.Adapter<MyHolder> {
 
