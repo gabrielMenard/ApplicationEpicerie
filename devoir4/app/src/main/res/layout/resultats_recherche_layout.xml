@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_produit_recherche"
+        android:layout_width="328dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/image_temp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nom_produit_resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/nom_produit"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/image_produit_recherche"
+        app:layout_constraintTop_toBottomOf="@+id/image_produit_recherche" />
+
+    <TextView
+        android:id="@+id/info_produit_resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/info_produit"
+        app:layout_constraintStart_toStartOf="@+id/nom_produit_resultat"
+        app:layout_constraintTop_toBottomOf="@+id/nom_produit_resultat" />
+
+    <Button
+        android:id="@+id/bouton_resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/voir_le_produit"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/info_produit_resultat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nom_produit_resultat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

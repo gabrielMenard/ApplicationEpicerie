@@ -36,6 +36,7 @@
     <string name="favoris">Favoris</string>
     <string name="d_connexion">Déconnexion</string>
     <string name="mode_sombre">Mode sombre</string>
+    <string name="voir_le_produit">Voir le produit</string>
     <string-array name="dates">
         <item>05/06/2021</item>
         <item>05/06/2021</item>
@@ -59,5 +60,19 @@
         <item>Produit 8</item>
         <item>Produit 9</item>
         <item>Produit 10</item>
+    </string-array>
+    <string-array name="nom_pomme">
+        <item>HoneyCrisp</item>
+        <item>Spartan</item>
+        <item>Gala</item>
+        <item>Golden</item>
+        <item>Granny Smith</item>
+    </string-array>
+    <string-array name="info_pomme">
+        <item>Info 1</item>
+        <item>Info 2</item>
+        <item>Info 3</item>
+        <item>Info 4</item>
+        <item>Info 5</item>
     </string-array>
 </resources>
