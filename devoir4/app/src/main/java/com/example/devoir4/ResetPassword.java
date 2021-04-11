@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class ResetPassword extends AppCompatActivity {
 
     Button envoie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.reset_password);
 
         envoie = findViewById(R.id.envoie);
         envoie.setOnClickListener(envoieListener);
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener envoieListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(MainActivity.this, CreerCompte.class));
+            startActivity(new Intent(ResetPassword.this, CreerCompte.class));
         }
     };
 }
