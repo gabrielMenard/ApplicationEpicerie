@@ -22,6 +22,6 @@ public class Preauthentification extends AppCompatActivity {
         b_signin.setOnClickListener(b_signinListener);
     }
 
-    View.OnClickListener b_guestListener = v -> startActivity(new Intent(Preauthentification.this,Accueil.class));
+    View.OnClickListener b_guestListener = v -> startActivity(new Intent(Preauthentification.this, Accueil.class));
     View.OnClickListener b_signinListener = v -> startActivity(new Intent(Preauthentification.this, Authentification.class));
 }

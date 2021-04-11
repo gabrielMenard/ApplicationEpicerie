@@ -2,4 +2,24 @@
     <string name="app_name">devoir4</string>
     <string name="b_guest">Continuer en tant qu\'invité</string>
     <string name="t_search">Commencer à rechercher tout de suite!</string>
+    <string name="t_echoshop">Ecoshop</string>
+    <string name="t_b_code_barre">Recherche par code-barres</string>
+    <string name="t_input_mots_cles">Entrer des mots-clés</string>
+    <string name="t_b_rechercher">Rechercher</string>
+    <string name="t_b_favoris">Favoris</string>
+    <string name="t_b_historique">Historique</string>
+    <string name="t_b_panier">Panier</string>
+    <string name="t_auth">Authentification</string>
+    <string name="t_input_email">Adresse courriel</string>
+    <string name="t_input_password">Mot de passe</string>
+    <string name="t_b_connexion">Se connecter</string>
+    <string name="t_b_oublie_password">Mot de passe oublié?</string>
+    <string name="t_b_creer_compte">Créer un compte</string>
+    <string name="t_favoris_nom">Honeycrisp Apple</string>
+    <string name="t_b_signin">S\'authentifier</string>
+    <string-array name="t_favoris_nom">
+        <item>HoneyCrisp</item>
+        <item>Gala</item>
+        <item>Golden</item>
+    </string-array>
 </resources>
