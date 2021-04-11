@@ -11,10 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Devoir4">
+        <activity android:name=".ResultatsRecherche" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Panier" />
+        <activity android:name=".Historique" />
+        <activity android:name=".InfoSup" />
+        <activity android:name=".Modifier" />
+        <activity android:name=".ResultatChoisi" />
+        <activity android:name=".CreerCompte" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".Preauthentification">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
