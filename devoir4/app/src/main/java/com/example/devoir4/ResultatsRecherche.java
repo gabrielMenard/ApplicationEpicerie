@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 public class ResultatsRecherche extends AppCompatActivity {
 
+    ImageView b_profile;
     RecyclerView recyclerView;
     String[] nom;
     String[] info;
@@ -36,6 +37,8 @@ public class ResultatsRecherche extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(myAdapter);
 
+        b_profile = findViewById(R.id.imageView2);
+        b_profile.setOnClickListener(b_profileListener);
     }
 
     class MyAdapter extends RecyclerView.Adapter<MyHolder> {
@@ -99,4 +102,6 @@ public class ResultatsRecherche extends AppCompatActivity {
             startActivity(new Intent(ResultatsRecherche.this, ResultatChoisi.class));
         }
     };
+
+    View.OnClickListener b_profileListener = v -> startActivity(new Intent(ResultatsRecherche.this, Profile.class));
 }

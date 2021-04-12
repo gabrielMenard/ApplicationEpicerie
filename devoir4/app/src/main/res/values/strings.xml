@@ -21,6 +21,7 @@
         <item>HoneyCrisp</item>
         <item>Gala</item>
         <item>Golden</item>
+    </string-array>
     <string name="ecoshop">Ecoshop</string>
     <string name="oublie">Veuillez saisir votre adresse courriel et nous vous enverrons un lien pour réinitialiser votre mot de passe.</string>
     <string name="adresse_courriel">Adresse courriel</string>
