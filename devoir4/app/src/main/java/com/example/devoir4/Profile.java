@@ -9,21 +9,65 @@ import android.widget.ImageView;
 
 public class Profile extends AppCompatActivity {
 
-    ImageView imageMain;
+    View historique;
+    View modifier;
+    View favoris;
+    View panier;
+    View deconnexion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        imageMain = findViewById(R.id.imageView8);
-        imageMain.setOnClickListener(imageMainListener);
+        modifier = findViewById(R.id.click_modifier);
+        modifier.setOnClickListener(modifierListener);
+
+        historique = findViewById(R.id.click_historique);
+        historique.setOnClickListener(historiqueistener);
+
+        favoris = findViewById(R.id.click_favoris);
+        favoris.setOnClickListener(favorisListener);
+
+        panier = findViewById(R.id.click_panier);
+        panier.setOnClickListener(panierListener);
+
+        deconnexion = findViewById(R.id.click_deconnexion);
+        deconnexion.setOnClickListener(deconnexionListener);
     }
 
-    View.OnClickListener imageMainListener = new View.OnClickListener() {
+    View.OnClickListener historiqueistener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             startActivity(new Intent(Profile.this, ResultatsRecherche.class));
+        }
+    };
+
+    View.OnClickListener modifierListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(Profile.this, Modifier.class));
+        }
+    };
+
+    View.OnClickListener favorisListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(Profile.this, Favoris.class));
+        }
+    };
+
+    View.OnClickListener panierListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(Profile.this, Panier.class));
+        }
+    };
+
+    View.OnClickListener deconnexionListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(new Intent(Profile.this, Preauthentification.class));
         }
     };
 }

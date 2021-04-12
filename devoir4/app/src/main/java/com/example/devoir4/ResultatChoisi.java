@@ -33,7 +33,7 @@ public class ResultatChoisi extends AppCompatActivity {
     View.OnClickListener profilListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(ResultatChoisi.this, Modifier.class));
+            startActivity(new Intent(ResultatChoisi.this, Profile.class));
         }
     };
 
@@ -47,7 +47,7 @@ public class ResultatChoisi extends AppCompatActivity {
     View.OnClickListener voirAlternativeListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(ResultatChoisi.this, Historique.class));
+            startActivity(new Intent(ResultatChoisi.this, ResultatsRecherche.class));
         }
     };
 }
