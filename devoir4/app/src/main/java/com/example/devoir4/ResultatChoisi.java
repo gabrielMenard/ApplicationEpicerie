@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 public class ResultatChoisi extends AppCompatActivity {
 
+    ImageView b_back_resultat_choisi;
     ImageView profil;
     Button voirPlus;
     Button voirAlternative;
@@ -28,6 +29,8 @@ public class ResultatChoisi extends AppCompatActivity {
         voirAlternative = findViewById(R.id.button);
         voirAlternative.setOnClickListener(voirAlternativeListener);
 
+        b_back_resultat_choisi = findViewById(R.id.b_back_resultat_choisi);
+        b_back_resultat_choisi.setOnClickListener(v -> onBackPressed());
     }
 
     View.OnClickListener profilListener = new View.OnClickListener() {

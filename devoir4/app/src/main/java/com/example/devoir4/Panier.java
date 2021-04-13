@@ -19,7 +19,7 @@ public class Panier extends AppCompatActivity {
     String[] noms;
     int[] imageProduit = new int[] {R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp};
     int[] empruntes = new int[] {R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp};
-
+    ImageView b_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,8 @@ public class Panier extends AppCompatActivity {
         setContentView(R.layout.activity_panier);
 
         recyclerView = findViewById(R.id.rv_panier);
+        b_back = findViewById(R.id.imageView7);
+        b_back.setOnClickListener(v -> onBackPressed());
 
         noms = getResources().getStringArray(R.array.noms_produit);
 

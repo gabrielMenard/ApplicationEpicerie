@@ -25,17 +25,7 @@ public class ResetPassword extends AppCompatActivity {
         fermer.setOnClickListener(fermerListener);
     }
 
-    View.OnClickListener envoieListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(ResetPassword.this, CreerCompte.class));
-        }
-    };
+    View.OnClickListener envoieListener = v -> startActivity(new Intent(ResetPassword.this, CreerCompte.class));
 
-    View.OnClickListener fermerListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(ResetPassword.this, Preauthentification.class));
-        }
-    };
+    View.OnClickListener fermerListener = v -> onBackPressed();
 }

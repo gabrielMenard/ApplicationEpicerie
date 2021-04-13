@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,8 @@ public class Favoris extends AppCompatActivity {
     RecyclerView recyclerView;
     String[] nom;
     int[] images = new int[] {R.drawable.img_favoris_honeycrisp, R.drawable.img_favoris_honeycrisp, R.drawable.img_favoris_honeycrisp};
+    ImageView b_profile;
+    ImageView b_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,12 @@ public class Favoris extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(myAdapter);
+
+        b_profile = findViewById(R.id.b_profile);
+        b_profile.setOnClickListener(b_profileListener);
+
+        b_back = findViewById(R.id.b_back);
+        b_back.setOnClickListener(b_backListener);
     }
 
     class MyAdapter extends RecyclerView.Adapter<MyHolderFavoris> {
@@ -84,4 +93,7 @@ public class Favoris extends AppCompatActivity {
             t_favoris_nom = view.findViewById(R.id.t_favoris_nom);
         }
     }
+
+    View.OnClickListener b_profileListener = v -> startActivity(new Intent(Favoris.this, Profile.class));
+    View.OnClickListener b_backListener = v -> onBackPressed();
 }

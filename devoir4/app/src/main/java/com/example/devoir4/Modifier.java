@@ -13,6 +13,7 @@ public class Modifier extends AppCompatActivity {
 
     Spinner spinner;
     ImageView photo;
+    ImageView b_cancel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,18 +21,14 @@ public class Modifier extends AppCompatActivity {
         setContentView(R.layout.activity_modifier);
 
         photo = findViewById(R.id.imageView5);
-        photo.setOnClickListener(photoListener);
+        photo.setOnClickListener(v -> startActivity(new Intent(Modifier.this, Panier.class)));
+
+        b_cancel = findViewById(R.id.imageView4);
+        b_cancel.setOnClickListener(v -> onBackPressed());
 
         spinner = findViewById(R.id.spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.langues, android.R.layout.simple_spinner_dropdown_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
     }
-
-    View.OnClickListener photoListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(Modifier.this, Panier.class));
-        }
-    };
 }

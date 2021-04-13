@@ -21,6 +21,7 @@ public class Historique extends AppCompatActivity {
     int[] empruntes = new int[] {R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp};
 
     ImageView profile;
+    ImageView b_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,8 @@ public class Historique extends AppCompatActivity {
         profile = findViewById(R.id.imageView2);
         profile.setOnClickListener(profileListener);
 
+        b_back = findViewById(R.id.b_back);
+
         recyclerView = findViewById(R.id.rv_historique);
         MyAdapter myAdapter = new MyAdapter(dates, empruntes);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
@@ -38,12 +41,7 @@ public class Historique extends AppCompatActivity {
         recyclerView.setAdapter(myAdapter);
     }
 
-    View.OnClickListener profileListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(Historique.this, Profile.class));
-        }
-    };
+    View.OnClickListener profileListener = v -> startActivity(new Intent(Historique.this, Profile.class));
 
     class MyAdapter extends RecyclerView.Adapter<MyHolder> {
 

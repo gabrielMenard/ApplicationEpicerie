@@ -59,6 +59,7 @@
     <string name="d_connexion">Déconnexion</string>
     <string name="mode_sombre">Mode sombre</string>
     <string name="voir_le_produit">Voir le produit</string>
+    <string name="t_favoris">Favoris</string>
     <string-array name="dates">
         <item>05/06/2021</item>
         <item>05/06/2021</item>

@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 public class ResultatsRecherche extends AppCompatActivity {
 
+    ImageView b_back;
     ImageView b_profile;
     RecyclerView recyclerView;
     String[] nom;
@@ -39,6 +40,9 @@ public class ResultatsRecherche extends AppCompatActivity {
 
         b_profile = findViewById(R.id.imageView2);
         b_profile.setOnClickListener(b_profileListener);
+
+        b_back = findViewById(R.id.b_back_resultat_recherche);
+        b_back.setOnClickListener(v -> onBackPressed());
     }
 
     class MyAdapter extends RecyclerView.Adapter<MyHolder> {
@@ -96,12 +100,6 @@ public class ResultatsRecherche extends AppCompatActivity {
         }
     }
 
-    View.OnClickListener boutonResultatListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(ResultatsRecherche.this, ResultatChoisi.class));
-        }
-    };
-
+    View.OnClickListener boutonResultatListener = v -> startActivity(new Intent(ResultatsRecherche.this, ResultatChoisi.class));
     View.OnClickListener b_profileListener = v -> startActivity(new Intent(ResultatsRecherche.this, Profile.class));
 }

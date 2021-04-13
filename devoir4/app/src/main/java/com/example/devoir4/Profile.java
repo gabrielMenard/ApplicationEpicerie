@@ -15,10 +15,15 @@ public class Profile extends AppCompatActivity {
     View panier;
     View deconnexion;
 
+    ImageView b_cancel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        b_cancel = findViewById(R.id.b_cancel_profile);
+        b_cancel.setOnClickListener(v -> onBackPressed());
 
         modifier = findViewById(R.id.click_modifier);
         modifier.setOnClickListener(modifierListener);
