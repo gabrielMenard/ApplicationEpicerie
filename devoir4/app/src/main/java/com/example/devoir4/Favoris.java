@@ -65,13 +65,13 @@ public class Favoris extends AppCompatActivity {
             holder.img_favoris_item.setImageResource(images[position]);
             holder.t_favoris_nom.setText(nom[position]);
 
-            int blanc = ContextCompat.getColor(getBaseContext(), R.color.white);
-            int teal = ContextCompat.getColor(getBaseContext(), R.color.teal_700);
+            int blanc = ContextCompat.getColor(getBaseContext(), R.color.background);
+            int gray = ContextCompat.getColor(getBaseContext(), R.color.gray);
 
             if (position % 2 == 0) {
-                holder.itemView.setBackgroundColor(blanc);
+                holder.itemView.setBackgroundColor(gray);
             } else {
-                holder.itemView.setBackgroundColor(teal);
+                holder.itemView.setBackgroundColor(blanc);
             }
         }
 
