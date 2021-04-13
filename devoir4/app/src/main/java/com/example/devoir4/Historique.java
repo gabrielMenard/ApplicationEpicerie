@@ -33,6 +33,7 @@ public class Historique extends AppCompatActivity {
         profile.setOnClickListener(profileListener);
 
         b_back = findViewById(R.id.b_back);
+        b_back.setOnClickListener(v -> onBackPressed());
 
         recyclerView = findViewById(R.id.rv_historique);
         MyAdapter myAdapter = new MyAdapter(dates, empruntes);
