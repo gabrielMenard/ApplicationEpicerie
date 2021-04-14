@@ -25,6 +25,6 @@ public class CreerCompte extends AppCompatActivity {
         b_back.setOnClickListener(b_backListener);
     }
 
-    View.OnClickListener inscriptionListener = v -> startActivity(new Intent(CreerCompte.this, ResultatChoisi.class));
+    View.OnClickListener inscriptionListener = v -> startActivity(new Intent(CreerCompte.this, Accueil.class));
     View.OnClickListener b_backListener = v -> onBackPressed();
 }

@@ -1,6 +1,8 @@
 package com.example.devoir4;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.DialogInterface;
+import androidx.appcompat.app.AlertDialog;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +14,8 @@ public class ResetPassword extends AppCompatActivity {
 
     Button envoie;
     ImageView fermer;
+    AlertDialog.Builder popup;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +27,18 @@ public class ResetPassword extends AppCompatActivity {
 
         fermer = findViewById(R.id.x_button);
         fermer.setOnClickListener(fermerListener);
+
+        popup = new AlertDialog.Builder(this);
+        popup.setMessage(R.string.popup).setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(ResetPassword.this, Preauthentification.class));
+                dialog.cancel();
+            }
+        });
     }
 
-    View.OnClickListener envoieListener = v -> startActivity(new Intent(ResetPassword.this, CreerCompte.class));
+    View.OnClickListener envoieListener = v -> popup.show();
 
     View.OnClickListener fermerListener = v -> onBackPressed();
 }

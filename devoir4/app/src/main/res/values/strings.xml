@@ -98,4 +98,6 @@
         <item>Info 4</item>
         <item>Info 5</item>
     </string-array>
+    <string name="popup">Un courriel vous a été envoyé</string>
+    <string name="ok">Ok</string>
 </resources>
