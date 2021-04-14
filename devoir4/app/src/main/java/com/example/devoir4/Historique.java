@@ -18,7 +18,7 @@ public class Historique extends AppCompatActivity {
 
     RecyclerView recyclerView;
     String[] dates;
-    int[] empruntes = new int[] {R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp};
+    int[] empruntes = new int[] {R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte};
 
     ImageView profile;
     ImageView b_back;

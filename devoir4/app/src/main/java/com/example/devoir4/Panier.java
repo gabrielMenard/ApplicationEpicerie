@@ -18,7 +18,7 @@ public class Panier extends AppCompatActivity {
     RecyclerView recyclerView;
     String[] noms;
     int[] imageProduit = new int[] {R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp};
-    int[] empruntes = new int[] {R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp,R.drawable.impact_temp};
+    int[] empruntes = new int[] {R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte,R.drawable.emprunte};
     ImageView b_back;
 
     @Override
