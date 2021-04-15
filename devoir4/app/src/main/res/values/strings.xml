@@ -32,7 +32,7 @@
     <string name="lire">j\'ai lu et accepté les conditions</string>
     <string name="sinscrire">S\'inscrire</string>
     <string name="nom_produit">Nom du produit</string>
-    <string name="info_produit">Informattion sur le produit</string>
+    <string name="info_produit">Informations sur le produit</string>
     <string name="voir_alternatives">Voir alternatives</string>
     <string name="voir_plus">Voir plus</string>
     <string name="photo">Photo</string>
@@ -100,4 +100,8 @@
     </string-array>
     <string name="popup">Un courriel vous a été envoyé</string>
     <string name="ok">Ok</string>
+    <string name="honeycrisp">Honeycrisp</string>
+    <string name="honeycrisp_info">Pomme super croquante et délicieuse!</string>
+    <string name="ajouter_au_panier">Ajouter au panier</string>
+    <string name="item_ajoute">L\'item à été ajouté à votre panier</string>
 </resources>

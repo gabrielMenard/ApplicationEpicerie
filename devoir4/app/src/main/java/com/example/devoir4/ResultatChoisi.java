@@ -8,12 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class ResultatChoisi extends AppCompatActivity {
 
     ImageView b_back_resultat_choisi;
     ImageView profil;
     Button voirPlus;
     Button voirAlternative;
+    Button ajoutPanier;
+
+    Snackbar snackbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,11 @@ public class ResultatChoisi extends AppCompatActivity {
 
         b_back_resultat_choisi = findViewById(R.id.b_back_resultat_choisi);
         b_back_resultat_choisi.setOnClickListener(v -> onBackPressed());
+
+        ajoutPanier = findViewById(R.id.ajout_panier);
+        ajoutPanier.setOnClickListener(ajoutListener);
+
+        snackbar = Snackbar.make(findViewById(R.id.constraint),R.string.item_ajoute,Snackbar.LENGTH_SHORT);
     }
 
     View.OnClickListener profilListener = new View.OnClickListener() {
@@ -51,6 +62,13 @@ public class ResultatChoisi extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             startActivity(new Intent(ResultatChoisi.this, ResultatsRecherche.class));
+        }
+    };
+
+    View.OnClickListener ajoutListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            snackbar.show();
         }
     };
 }

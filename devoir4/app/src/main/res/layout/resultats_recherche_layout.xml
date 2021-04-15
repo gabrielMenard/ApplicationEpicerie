@@ -44,6 +44,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:backgroundTint="@color/black"
+        android:textColor="@color/white"
         android:text="@string/voir_le_produit"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@+id/info_produit_resultat"
