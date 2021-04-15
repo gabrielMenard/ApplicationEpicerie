@@ -15,14 +15,16 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class ResultatsRecherche extends AppCompatActivity {
 
     ImageView b_back;
     ImageView b_profile;
     RecyclerView recyclerView;
     String[] nom;
-    String[] info;
-    int[] images = new int[] {R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp};
+    int[] images = new int[] {R.drawable.img_favoris_honeycrisp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp, R.drawable.image_temp};
+    Snackbar snackbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +32,9 @@ public class ResultatsRecherche extends AppCompatActivity {
         setContentView(R.layout.activity_resultats_recherche);
 
         nom = getResources().getStringArray(R.array.nom_pomme);
-        info = getResources().getStringArray(R.array.info_pomme);
 
         recyclerView = findViewById(R.id.recyclerview_resulat);
-        MyAdapter myAdapter = new MyAdapter(nom, info, images);
+        MyAdapter myAdapter = new MyAdapter(nom, images);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(myAdapter);
@@ -43,19 +44,19 @@ public class ResultatsRecherche extends AppCompatActivity {
 
         b_back = findViewById(R.id.b_back_resultat_recherche);
         b_back.setOnClickListener(v -> onBackPressed());
+
+        snackbar = Snackbar.make(findViewById(R.id.constraint),R.string.item_ajoute,Snackbar.LENGTH_SHORT);
     }
 
     class MyAdapter extends RecyclerView.Adapter<MyHolder> {
 
         String[] nom;
-        String[] info;
         int[] images;
         String Textbouton;
 
-        MyAdapter(String[] nom, String[] info, int[] images) {
+        MyAdapter(String[] nom, int[] images) {
             super();
             this.nom = nom;
-            this.info = info;
             this.images = images;
             this.Textbouton = getResources().getString(R.string.voir_le_produit);
         }
@@ -71,10 +72,11 @@ public class ResultatsRecherche extends AppCompatActivity {
         public void onBindViewHolder(@NonNull MyHolder holder, int position) {
             holder.nom.setText(nom[position]);
             holder.imageView.setImageResource(images[position]);
-            holder.info.setText(info[position]);
+            holder.ajout.setText(R.string.ajouter_au_panier);
             holder.button.setText(Textbouton);
-
             holder.button.setOnClickListener(boutonResultatListener);
+
+            holder.ajout.setOnClickListener(ajoutListener);
         }
 
         @Override
@@ -88,18 +90,24 @@ public class ResultatsRecherche extends AppCompatActivity {
 
         ImageView imageView;
         TextView nom;
-        TextView info;
+        Button ajout;
         Button button;
 
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             this.imageView = itemView.findViewById(R.id.image_produit_recherche);
             this.nom = itemView.findViewById(R.id.nom_produit_resultat);
-            this.info = itemView.findViewById(R.id.info_produit_resultat);
+            this.ajout = itemView.findViewById(R.id.ajout);
             this.button = itemView.findViewById(R.id.bouton_resultat);
         }
     }
 
     View.OnClickListener boutonResultatListener = v -> startActivity(new Intent(ResultatsRecherche.this, ResultatChoisi.class));
     View.OnClickListener b_profileListener = v -> startActivity(new Intent(ResultatsRecherche.this, Profile.class));
+    View.OnClickListener ajoutListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            snackbar.show();
+        }
+    };
 }
