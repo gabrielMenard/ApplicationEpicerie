@@ -17,13 +17,13 @@ import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 
-public class ResultatsRecherche extends AppCompatActivity {
+public class VoirAlternative extends AppCompatActivity {
 
     ImageView b_back;
     ImageView b_profile;
     RecyclerView recyclerView;
     String[] nom;
-    int[] images = new int[] {R.drawable.img_favoris_honeycrisp, R.drawable.spartan, R.drawable.gala, R.drawable.golden, R.drawable.verte};
+    int[] images = new int[] {R.drawable.spartan, R.drawable.gala, R.drawable.golden, R.drawable.verte};
     Snackbar snackbar;
 
     @Override
@@ -31,7 +31,7 @@ public class ResultatsRecherche extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultats_recherche);
 
-        nom = getResources().getStringArray(R.array.nom_pomme);
+        nom = getResources().getStringArray(R.array.nom_pomme_sans_honey);
 
         recyclerView = findViewById(R.id.recyclerview_resulat);
         MyAdapter myAdapter = new MyAdapter(nom, images);
@@ -102,8 +102,8 @@ public class ResultatsRecherche extends AppCompatActivity {
         }
     }
 
-    View.OnClickListener boutonResultatListener = v -> startActivity(new Intent(ResultatsRecherche.this, ResultatChoisi.class));
-    View.OnClickListener b_profileListener = v -> startActivity(new Intent(ResultatsRecherche.this, Profile.class));
+    View.OnClickListener boutonResultatListener = v -> startActivity(new Intent(VoirAlternative.this, ResultatChoisi.class));
+    View.OnClickListener b_profileListener = v -> startActivity(new Intent(VoirAlternative.this, Profile.class));
     View.OnClickListener ajoutListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {

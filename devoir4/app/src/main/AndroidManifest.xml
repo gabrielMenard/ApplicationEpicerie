@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.devoir4">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".VoirAlternative"></activity>
         <activity android:name=".Preauthentification">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,12 +28,14 @@
         <activity android:name=".ResultatChoisi" />
         <activity android:name=".CreerCompte" />
         <activity android:name=".ResetPassword" />
-        <activity android:name=".Authentification"/>
-        <activity android:name=".Accueil"/>
-        <activity android:name=".Scan"
+        <activity android:name=".Authentification" />
+        <activity android:name=".Accueil" />
+        <activity
+            android:name=".Scan"
             android:screenOrientation="portrait"
             android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"/>
-        <activity android:name=".Favoris"/>
+            android:theme="@style/zxing_CaptureTheme" />
+        <activity android:name=".Favoris" />
     </application>
+
 </manifest>

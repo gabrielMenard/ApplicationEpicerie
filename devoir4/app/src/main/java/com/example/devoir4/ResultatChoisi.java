@@ -61,7 +61,7 @@ public class ResultatChoisi extends AppCompatActivity {
     View.OnClickListener voirAlternativeListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(ResultatChoisi.this, ResultatsRecherche.class));
+            startActivity(new Intent(ResultatChoisi.this, VoirAlternative.class));
         }
     };
 

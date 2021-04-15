@@ -104,4 +104,13 @@
     <string name="honeycrisp_info">Pomme super croquante et délicieuse!</string>
     <string name="ajouter_au_panier">Ajouter au panier</string>
     <string name="item_ajoute">L\'item à été ajouté à votre panier</string>
+    <string name="il_n_y_a_pas_grand">Il n\'y a pas grand chose à dire de mauvais sur son empreinte environnementale. Elle ne prends pas trop de ressource pour se faire produire et est entièrement compostable.</string>
+    <string name="aucune_information">Aucune information disponible sur la manufacture de cet article</string>
+    <string name="qu_bec_canada">Lieu de production : Québec, Canada</string>
+    <string-array name="nom_pomme_sans_honey">
+        <item>Spartan</item>
+        <item>Gala</item>
+        <item>Golden</item>
+        <item>Granny Smith</item>
+    </string-array>
 </resources>

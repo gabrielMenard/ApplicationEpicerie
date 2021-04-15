@@ -39,7 +39,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/nom_produit"
+                android:text="@string/honeycrisp"
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -58,7 +58,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/endroit_d_origine" />
+                    android:text="@string/qu_bec_canada" />
             </LinearLayout>
 
             <LinearLayout
@@ -73,7 +73,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/detail_supp" />
+                    android:text="@string/il_n_y_a_pas_grand" />
             </LinearLayout>
 
             <LinearLayout
@@ -86,7 +86,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/description_manu" />
+                    android:text="@string/aucune_information" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
